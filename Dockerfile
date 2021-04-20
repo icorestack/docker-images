@@ -47,7 +47,7 @@ ENV AUTOCONF=mysql \
     SQLITE_VERSION="4.3.1" \
     SCHEMA_VERSION_TABLE="_schema_version"
 
-EXPOSE 53/tcp 53/udp
+EXPOSE 53/tcp 53/udp 8081/tcp
 ADD pdns.conf /etc/pdns/
 ADD entrypoint.sh /bin/powerdns
 ENTRYPOINT ["powerdns"]
